@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+header {
+  background-color: #3f51b5;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #303f9f;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  background-color: #283593;
+  border-radius: 5px;
+}
+
+section {
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 900px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #3f51b5;
+  font-family: "Caprasimo", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+}
+
+footer {
+  background-color: #e8eaf6;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+.parrafo{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-size: 18px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #303f9f;
+}
+.videos {
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+  gap: 10px;
+
+}
+
+.videos p{
+  
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+.juego {
+
+  list-style:none;
+}
+
+.juego li a {
+  
+    font-style: arial;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+
+}

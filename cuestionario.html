@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuestionario: Ambientes de Aprendizaje</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #DEDEDE;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    .pregunta {
+      background-color: #fff;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .contain{
+      margin-left: 10%;
+      margin-right: 10%;
+      background: white;
+      border-radius: 30px;
+      box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.41);
+      -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.41);
+      -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.41);
+      padding: 20px;
+      position: relative;
+      top: 70%;
+    }
+
+    h1{
+      
+      margin-left: 20%; 
+    }
+
+    #cuestionario{
+
+       margin-left: 20%;
+       
+    }
+
+    #cuestionario input{
+
+       margin-left: 20%;
+       
+    }
+
+    #cuestionario p{
+
+        font-style: arial;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+       
+    }
+  </style>
+</head>
+<body>
+  <div class="contain">
+    <h1>Cuestionario: Ambientes de Aprendizaje</h1>
+
+  <form id="cuestionario">
+    <div class="pregunta">
+      <p>1. ¿Qué es un ambiente de aprendizaje?</p>
+      <input type="radio" name="p1" value="a"> Un aula tradicional<br>
+      <input type="radio" name="p1" value="b"> Un entorno físico o virtual que facilita el aprendizaje<br>
+      <input type="radio" name="p1" value="c"> Un libro de texto<br>
+    </div>
+
+    <div class="pregunta">
+      <p>2. ¿Cuál de estas herramientas es un recurso digital?</p>
+      <input type="radio" name="p2" value="a"> Kahoot<br>
+      <input type="radio" name="p2" value="b"> Tiza y pizarra<br>
+      <input type="radio" name="p2" value="c"> Cuaderno<br>
+    </div>
+
+    <div class="pregunta">
+      <p>3. ¿Qué tipo de interacción ocurre en un foro en línea?</p>
+      <input type="radio" name="p3" value="a"> Sincrónica<br>
+      <input type="radio" name="p3" value="b"> Asincrónica<br>
+      <input type="radio" name="p3" value="c"> Presencial<br>
+    </div>
+
+    <div class="pregunta">
+      <p>4. ¿Cuál es un beneficio de los ambientes híbridos?</p>
+      <input type="radio" name="p4" value="a"> Solo clases en línea<br>
+      <input type="radio" name="p4" value="b"> Acceso restringido a recursos<br>
+      <input type="radio" name="p4" value="c"> Combinación de actividades presenciales y virtuales<br>
+    </div>
+
+    <div class="pregunta">
+      <p>5. ¿Qué fomenta una experiencia de aprendizaje significativa?</p>
+      <input type="radio" name="p5" value="a"> Exámenes finales<br>
+      <input type="radio" name="p5" value="b"> Participación activa y pensamiento crítico<br>
+      <input type="radio" name="p5" value="c"> Clases magistrales<br>
+    </div>
+
+    <button type="button" onclick="evaluarCuestionario()">Enviar</button>
+  </form>
+
+  <div id="resultado"></div>
+  </div>
+
+  
+
+  <script>
+    function evaluarCuestionario() {
+      const respuestasCorrectas = {
+        p1: "b",
+        p2: "a",
+        p3: "b",
+        p4: "c",
+        p5: "b"
+      };
+
+      let puntaje = 0;
+      for (let clave in respuestasCorrectas) {
+        const seleccionada = document.querySelector(`input[name="${clave}"]:checked`);
+        if (seleccionada && seleccionada.value === respuestasCorrectas[clave]) {
+          puntaje++;
+        }
+      }
+
+      const resultado = document.getElementById("resultado");
+      resultado.textContent = `Tu puntaje es ${puntaje} de 5.`;
+      resultado.style.color = puntaje >= 3 ? "green" : "red";
+    }
+  </script>
+</body>
+</html>
